@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+    <form th:action="@{/ventas}" th:object ="${VentaDto}" th:method ="POST">
+        <table>
+        	<tr>
+                <td> <label> ProductosCodigoBarras: </label></td>
+                <td> <input type="text" id="codigoBarras" value="Inserte el codigo" th:field="${VentaDto.codigoBarras}"> </td>
+            </tr>
+            <tr>
+                <td> <label> ProductosCantidad: </label></td>
+                <td> <input type="text" id="cantidad" value="Inserte la cantidad" th:field="${VentaDto.cantidad}"> </td>
+            </tr>
+            <tr>
+                <td> <label> CedulaaCliente: </label></td>
+                <td> <input type="text" id="cedulaCliente" value="Inserte la cedula" th:field="${Venta.cedulaCliente}"> </td>
+            </tr>
+            <tr>
+                <td> <label> NumeroVenta: </label></td>
+                <td> <input type="text" id="numero" value="Inserte el numero" th:field="${Venta.numero}"> </td>
+          
+        </table>
+
+        <input type="submit" value="GUARDAR">
+    </form>
+</body>
+
+</html>

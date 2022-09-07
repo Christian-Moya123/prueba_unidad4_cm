@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+    <form th:action="@{/productos}" th:object ="${ingresarProducto}" th:method ="POST">
+        <table>
+        	<tr>
+                <td> <label> CodigoBarras: </label></td>
+                <td> <input type="text" id="codigoBarras" value="Inserte codigo barras" th:field="${ingresarProducto.codigoBarras}"> </td>
+            </tr>
+            <tr>
+                <td> <label> Nombre: </label></td>
+                <td> <input type="text" id="nombre" value="Inserte el nombre" th:field="${ingresarProducto.nombre}"> </td>
+            </tr>
+            <tr>
+                <td> <label> Categoria: </label></td>
+                <td> <input type="text" id="categoria" value="Inserte el categoria" th:field="${ingresarProducto.categoria}"> </td>
+            </tr>
+            <tr>
+                <td> <label> Stock: </label></td>
+                <td> <input type="text" id="stock" value="Inserte el stock" th:field="${ingresarProducto.stock}"> </td>
+            </tr>
+            <tr>
+                <td> <label> Precio: </label></td>
+                <td> <input type="text" id="precio" value="Inserte el precio" th:field="${ingresarProducto.precio}"> </td>
+            </tr>
+            
+        </table>
+
+        <input type="submit" value="GUARDAR">
+    </form>
+</body>
+
+</html>
